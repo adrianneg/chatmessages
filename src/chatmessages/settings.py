@@ -79,7 +79,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': "messages",
-        "USERNAME": "jevaughnferguson",
+        "USERNAME": "",
         "PASSWORD": ""
     }
 }
