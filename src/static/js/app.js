@@ -12,6 +12,11 @@ chatApp.controller("messageCtrl", ["$scope", "$http", function($scope, $http){
   $scope.saveMessage = function(){
     var msg = $scope.newmessage;
     $scope.messages.push({text: msg, done: false});
+    $http.post("/messages/api/?format=json", {text: msg, done: false})
+     .then(function(response) {
+          console.log(response)
+         //$scope.messages = response.data;
+     });
     $scope.newmessage = "";
     return;
   };
